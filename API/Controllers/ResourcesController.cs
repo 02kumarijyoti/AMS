@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using API.Data;
 using API.Dtos;
 using API.Entintes;
 using API.Interfaces;
@@ -9,11 +8,10 @@ using AutoMapper;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-   
+
     [ApiController]
     [Route("api/[controller]")]
     public class ResourcesController : ControllerBase
@@ -52,7 +50,7 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login([FromBody]LoginDto loginDto)
         {
-            var spec = new ResourceWithEmailAndPasswordSpecification(loginDto.Email);
+            var spec = new ResourceByEmailSpecification(loginDto.Email);
             var  resource = await _resourcesRepo.GetEntityWithSpec(spec);
             if (resource==null) return Unauthorized("Unauthorize user");
             if(loginDto.Password != resource.Password) return BadRequest("Password not match");
@@ -78,7 +76,7 @@ namespace API.Controllers
         [HttpPost("changepassword")]
         public async Task<ActionResult<Resource>> ChangePassword([FromBody]ChangePasswordDto changePassword)
         {
-            var spec = new ResourceWithEmailAndPasswordSpecification(changePassword.Email,changePassword.Password);
+            var spec = new ResourceByEmailSpecification(changePassword.Email,changePassword.Password);
             var  resource = await _resourcesRepo.GetEntityWithSpec(spec);
             if(resource == null) return BadRequest("Old password not match");
             resource.Password=changePassword.NewPassword;

@@ -3,13 +3,13 @@ using API.Entintes;
 
 namespace API.Specifications
 {
-    public class ResourceWithEmailAndPasswordSpecification : BaseSpecification<Resource>
+    public class ResourceByEmailSpecification : BaseSpecification<Resource>
     {
-        public ResourceWithEmailAndPasswordSpecification(string email,string password ) 
+        public ResourceByEmailSpecification(string email,string password ) 
             : base(r => r.Email == email && r.Password == password)
         {
         }
-        public ResourceWithEmailAndPasswordSpecification(string email) 
+        public ResourceByEmailSpecification(string email) 
             : base(r => r.Email == email && r.IsActive == true)
         {
         }
