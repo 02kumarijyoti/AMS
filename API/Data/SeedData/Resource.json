@@ -1,0 +1,43 @@
+[
+    {
+      "Id": 1,
+      "Name": "Admin",
+      "Status":"Active",
+      "Email":"admin@gmail.com",
+      "Password": "Admin@123",
+      "StartDate": "2020-11-11",
+      "EndDate": "2022-11-11",
+      "IsActive":true
+    },
+    {
+        "Id": 2,
+        "Name": "Ninja",
+        "Status":"Active",
+        "Email":"ninja@gmail.com",
+        "Password": "ninja@123",
+        "StartDate": "2020-11-11",
+        "EndDate": "2022-11-11",
+        "IsActive":false
+
+      },
+      {
+        "Id": 3,
+        "Name": "Tiya",
+        "Status":"Active",
+        "Email":"tiya@gmail.com",
+        "Password": "tiya@123",
+        "StartDate": "2020-11-11",
+        "EndDate": "2022-11-11",
+        "IsActive":false
+      },
+      {
+        "Id": 4,
+        "Name": "Riya",
+        "Status":"Active",
+        "Email":"riya@gmail.com",
+        "Password": "riya@123",
+        "StartDate": "2020-11-11",
+        "EndDate": "2022-11-11",
+        "IsActive":false
+      }
+  ]

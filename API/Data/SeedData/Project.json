@@ -1,0 +1,26 @@
+[
+    {
+      "Id": 1,
+      "Name": "Node JS",
+      "Status":"Active"
+     
+    },
+    {
+        "Id": 2,
+        "Name": "MySed +",
+        "Status":"Active"
+      
+      },
+      {
+        "Id": 3,
+        "Name": "leave",
+        "Status":"Active"
+      
+      },
+      {
+        "Id": 4,
+        "Name": "DEP",
+        "Status":"Active"
+       
+      }
+  ]
